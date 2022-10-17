@@ -55,7 +55,7 @@ function censorDocument(e){
 	var censoredText = documentText
 
 	for(var i=0; i<keywordsToCensor.length; i++){ 
-		let keyword = keywordsToCensor[i];
+		let keyword = keywordsToCensor[i].trim();
 
 		if(keyword.substring(0,1) === "'" || keyword.substring(0,1) === '"'){
 			keyword = keyword.substring(1, keyword.length-1);  
